@@ -13,7 +13,7 @@ class JumpToIndexPage extends StatefulWidget {
 class _JumpToIndexPageState extends State<JumpToIndexPage> {
   FlutterListViewController controller = FlutterListViewController();
   TextEditingController indexTextController =
-      TextEditingController(text: "5000");
+      TextEditingController(text: "99");
   TextEditingController offsetTextController =
       TextEditingController(text: "60");
 
@@ -23,7 +23,7 @@ class _JumpToIndexPageState extends State<JumpToIndexPage> {
   bool alignToBottom = false;
   @override
   initState() {
-    for (var i = 0; i < 100000; i++) {
+    for (var i = 0; i < 100; i++) {
       data.add(i);
       int height = 35 + Random().nextInt(100);
       heights.add(double.parse(height.toString()));

@@ -205,10 +205,11 @@ class FlutterListViewElement extends RenderObjectElement {
     // paintedElements
     var flutterListViewRender = renderObject as FlutterListViewRender;
     var viewportHeight = flutterListViewRender.currentViewportHeight ?? 0;
+    var scrollOffset = flutterListViewRender.currentScrollOffset ?? 0.0;
     for (var item in flutterListViewRender.paintedElements) {
       if (item.index == index &&
           item.offset > 0 &&
-          item.offset + item.height < viewportHeight) {
+          item.offset + item.height <= viewportHeight + scrollOffset) {
         return;
       }
     }
